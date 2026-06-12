@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla — Recompensas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <span class="logo">🌱 EcoRecicla</span>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="mapa.html">Mapa</a>
+      <a href="historico.html">Histórico</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="recompensas.html">Recompensas</a>
+      <a href="#" id="sair">Sair</a>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>🎁 Loja de recompensas</h1>
+    <p>Seus pontos: <strong id="meus-pontos">0</strong></p>
+    <div id="recompensas" class="grid grid-3 mt"></div>
+  </main>
+
+  <script src="js/estruturas/Lista.js"></script>
+  <script src="js/estruturas/Fila.js"></script>
+  <script src="js/estruturas/Pilha.js"></script>
+  <script src="js/models/Material.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="js/models/PontoColeta.js"></script>
+  <script src="js/models/Descarte.js"></script>
+  <script src="js/models/Medalha.js"></script>
+  <script src="js/models/Recompensa.js"></script>
+  <script src="js/models/SistemaReciclagem.js"></script>
+  <script src="js/services/Storage.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/recompensas.js"></script>
+</body>
+</html>

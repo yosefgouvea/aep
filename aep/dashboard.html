@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <span class="logo">🌱 EcoRecicla</span>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="mapa.html">Mapa</a>
+      <a href="historico.html">Histórico</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="recompensas.html">Recompensas</a>
+      <a href="#" id="sair">Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 id="saudacao">Olá!</h1>
+    <div class="grid grid-3 mt">
+      <div class="card metrica"><div class="valor" id="m-pontos">0</div><div class="rotulo">Pontos</div></div>
+      <div class="card metrica"><div class="valor" id="m-nivel">—</div><div class="rotulo">Nível</div></div>
+      <div class="card metrica"><div class="valor" id="m-kg">0</div><div class="rotulo">Kg reciclados</div></div>
+    </div>
+
+    <div class="card mt">
+      <strong>Meta mensal</strong> <span id="meta-texto" class="subtitulo"></span>
+      <div class="progresso mt"><div id="meta-barra" style="width:0%"></div></div>
+    </div>
+
+    <h2 class="titulo-secao">🌍 Seu impacto ambiental</h2>
+    <div class="grid grid-3">
+      <div class="card metrica"><div class="valor" id="i-co2">0</div><div class="rotulo">kg de CO₂ evitado</div></div>
+      <div class="card metrica"><div class="valor" id="i-agua">0</div><div class="rotulo">litros de água</div></div>
+      <div class="card metrica"><div class="valor" id="i-arvores">0</div><div class="rotulo">árvores equivalentes</div></div>
+    </div>
+
+    <h2 class="titulo-secao">🏅 Suas medalhas</h2>
+    <div id="medalhas" class="grid" style="grid-template-columns:repeat(auto-fill,100px)"></div>
+
+    <p class="mt"><a class="btn" href="mapa.html">+ Registrar descarte</a></p>
+  </main>
+
+  <script src="js/estruturas/Lista.js"></script>
+  <script src="js/estruturas/Fila.js"></script>
+  <script src="js/estruturas/Pilha.js"></script>
+  <script src="js/models/Material.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="js/models/PontoColeta.js"></script>
+  <script src="js/models/Descarte.js"></script>
+  <script src="js/models/Medalha.js"></script>
+  <script src="js/models/Recompensa.js"></script>
+  <script src="js/models/SistemaReciclagem.js"></script>
+  <script src="js/services/Storage.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/dashboard.js"></script>
+</body>
+</html>

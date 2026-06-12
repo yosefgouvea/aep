@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla — Entrar / Cadastrar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar"><span class="logo">🌱 EcoRecicla</span><nav><a href="index.html">Início</a></nav></header>
+  <main class="container" style="max-width:460px">
+    <div class="card">
+      <div id="abas" style="display:flex;gap:8px;margin-bottom:16px">
+        <button class="btn" id="aba-login">Entrar</button>
+        <button class="btn-secundario btn" id="aba-cadastro">Cadastrar</button>
+      </div>
+
+      <form id="form-login">
+        <div class="campo"><label>E-mail</label><input type="email" id="login-email" required></div>
+        <div class="campo"><label>Senha</label><input type="password" id="login-senha" required></div>
+        <div class="erro" id="login-erro"></div>
+        <button class="btn" type="submit" style="width:100%">Entrar</button>
+        <p class="subtitulo mt center">Demo: mariana@demo.com / demo</p>
+      </form>
+
+      <form id="form-cadastro" style="display:none">
+        <div class="campo"><label>Nome</label><input type="text" id="cad-nome" required></div>
+        <div class="campo"><label>E-mail</label><input type="email" id="cad-email" required></div>
+        <div class="campo"><label>Senha (mín. 4)</label><input type="password" id="cad-senha" required></div>
+        <div class="erro" id="cad-erro"></div>
+        <button class="btn" type="submit" style="width:100%">Criar conta</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/estruturas/Lista.js"></script>
+  <script src="js/estruturas/Fila.js"></script>
+  <script src="js/estruturas/Pilha.js"></script>
+  <script src="js/models/Material.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="js/models/PontoColeta.js"></script>
+  <script src="js/models/Descarte.js"></script>
+  <script src="js/models/Medalha.js"></script>
+  <script src="js/models/Recompensa.js"></script>
+  <script src="js/models/SistemaReciclagem.js"></script>
+  <script src="js/services/Storage.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>

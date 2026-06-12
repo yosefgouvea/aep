@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla — Testes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-simples">
+  <main class="container">
+    <h1>✅ Testes automáticos</h1>
+    <div id="resultado" class="lista-testes"></div>
+    <p id="resumo" class="resumo-testes"></p>
+  </main>
+
+  <!-- Estruturas e modelos (ordem importa) -->
+  <script src="js/estruturas/Lista.js"></script>
+  <script src="js/estruturas/Fila.js"></script>
+  <script src="js/estruturas/Pilha.js"></script>
+  <script src="js/models/Material.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="js/models/PontoColeta.js"></script>
+  <script src="js/models/Descarte.js"></script>
+  <script src="js/models/Medalha.js"></script>
+  <script src="js/models/Recompensa.js"></script>
+  <script src="js/models/SistemaReciclagem.js"></script>
+
+  <script>
+    let total = 0, passou = 0;
+    const out = document.getElementById("resultado");
+    function teste(nome, fn) {
+      total++;
+      const div = document.createElement("div");
+      try { fn(); passou++; div.className = "teste-ok"; div.textContent = "✅ " + nome; }
+      catch (e) { div.className = "teste-fail"; div.textContent = "❌ " + nome + " — " + e.message; }
+      out.appendChild(div);
+    }
+    function assert(c, m) { if (!c) throw new Error(m || "esperado verdadeiro"); }
+    function assertEqual(a, b) { if (JSON.stringify(a) !== JSON.stringify(b)) throw new Error(`obtido ${JSON.stringify(a)}, esperado ${JSON.stringify(b)}`); }
+
+    // FILA / PILHA / LISTA
+    teste("Fila é FIFO", () => { const f = new Fila(); f.enfileirar(1).enfileirar(2); assertEqual(f.desenfileirar(), 1); });
+    teste("Pilha é LIFO", () => { const p = new Pilha(); p.empilhar(1).empilhar(2); assertEqual(p.desempilhar(), 2); });
+    teste("Lista ordena por pontos", () => { const l = new Lista(); l.adicionar({p:1}).adicionar({p:9}); assertEqual(l.ordenarPor("p", true)[0].p, 9); });
+    // POLIMORFISMO
+    teste("Polimorfismo de Material", () => { assert(new Plastico().calcularImpacto(1).co2 !== new Metal().calcularImpacto(1).co2); });
+    // ENCAPSULAMENTO
+    teste("Usuario protege senha", () => { const u = new Usuario("A","a@x","1"); assertEqual(u.senha, undefined); assert(u.verificarSenha("1")); });
+    // FLUXO COMPLETO
+    teste("Fluxo: registrar -> processar credita pontos", () => {
+      const s = new SistemaReciclagem();
+      const u = s.cadastrarUsuario("A", "a@x", "1");
+      const pc = new PontoColeta(1,"P","R",0,0,["plastico"]);
+      s.registrarDescarte(u, pc, new Plastico(), 2);
+      s.processarFila();
+      assertEqual(u.pontos, 20);
+    });
+
+    document.getElementById("resumo").textContent = `${passou}/${total} testes passaram.`;
+  </script>
+</body>
+</html>

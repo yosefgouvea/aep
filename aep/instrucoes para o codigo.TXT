@@ -1,0 +1,98 @@
+Você é um arquiteto de software, desenvolvedor Full Stack e especialista em projetos acadêmicos de Análise e Desenvolvimento de Sistemas.
+
+Com base no seguinte projeto acadêmico:
+
+**Tema:** Desenvolvimento de uma aplicação web para incentivo à reciclagem e ao descarte correto de resíduos, alinhada à ODS 12 (Consumo e Produção Responsáveis) da ONU.
+
+Desenvolva uma aplicação web completa que atenda aos requisitos abaixo:
+
+### Requisitos Obrigatórios
+
+#### 1. Interface Front-End
+
+Crie uma interface moderna, responsiva e profissional utilizando HTML, CSS e JavaScript.
+
+A aplicação deve conter:
+
+* Página inicial apresentando o projeto
+* Tela de cadastro e login de usuários
+* Dashboard do usuário
+* Mapa ou lista de pontos de coleta reciclável
+* Sistema de pontuação e recompensas
+* Histórico de descartes realizados
+* Ranking de usuários mais engajados
+* Layout moderno e intuitivo
+
+#### 2. Modelagem Orientada a Objetos
+
+Utilize Programação Orientada a Objetos (POO).
+
+Crie as classes em arquivos separados.
+
+Sugestão mínima:
+
+* Usuario
+* PontoColeta
+* Descarte
+* Recompensa
+* SistemaReciclagem
+
+Para cada classe apresente:
+
+* Atributos
+* Métodos
+* Encapsulamento
+* Construtores
+* Relacionamentos entre objetos
+
+Explique quais conceitos de POO foram utilizados:
+
+* Encapsulamento
+* Herança (se aplicável)
+* Polimorfismo
+* Abstração
+
+#### 3. Estrutura de Dados
+
+Implemente obrigatoriamente pelo menos uma estrutura de dados.
+
+Preferencialmente:
+
+* Lista para armazenar usuários cadastrados
+* Fila para processamento dos descartes enviados
+* Pilha para histórico de ações do usuário
+
+Explique claramente onde cada estrutura está sendo utilizada e sua importância no sistema.
+
+#### 4. Criatividade e Proposta de Valor
+
+Adicione diferenciais inovadores:
+
+* Sistema de gamificação
+* Medalhas e conquistas
+* Ranking ecológico
+* Recompensas em estabelecimentos parceiros
+* Metas mensais de reciclagem
+* Indicador de impacto ambiental gerado pelo usuário
+
+Apresente uma proposta de valor clara respondendo:
+
+* Qual problema a aplicação resolve?
+* Quem são os usuários?
+* Qual o diferencial em relação às soluções existentes?
+* Qual impacto social e ambiental será gerado?
+
+### Entregáveis
+
+1. Descrição completa da aplicação.
+2. Casos de uso.
+3. Diagrama de classes em texto.
+4. Estrutura de pastas do projeto.
+5. Código completo em HTML, CSS e JavaScript.
+6. Implementação das classes orientadas a objetos.
+7. Implementação da estrutura de dados.
+8. Explicação detalhada para apresentação em vídeo.
+9. Explicação de como o projeto atende à ODS 12.
+10. Sugestões para futuras melhorias.
+
+Gere o projeto como se fosse um trabalho acadêmico valendo nota máxima, utilizando boas práticas de desenvolvimento, código organizado, comentários explicativos e visual profissional.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla — Histórico</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <span class="logo">🌱 EcoRecicla</span>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="mapa.html">Mapa</a>
+      <a href="historico.html">Histórico</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="recompensas.html">Recompensas</a>
+      <a href="#" id="sair">Sair</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Histórico & Fila de processamento</h1>
+
+    <div class="card mt">
+      <strong>📥 Fila de descartes pendentes</strong>
+      <span class="tag" id="fila-qtd">0</span>
+      <div id="fila" class="mt"></div>
+      <button class="btn mt" id="btn-processar">Processar próximo da fila</button>
+      <button class="btn btn-secundario mt" id="btn-processar-tudo">Processar todos</button>
+    </div>
+
+    <h2 class="titulo-secao">📚 Histórico de ações (mais recentes no topo)</h2>
+    <div id="historico"></div>
+  </main>
+
+  <script src="js/estruturas/Lista.js"></script>
+  <script src="js/estruturas/Fila.js"></script>
+  <script src="js/estruturas/Pilha.js"></script>
+  <script src="js/models/Material.js"></script>
+  <script src="js/models/Usuario.js"></script>
+  <script src="js/models/PontoColeta.js"></script>
+  <script src="js/models/Descarte.js"></script>
+  <script src="js/models/Medalha.js"></script>
+  <script src="js/models/Recompensa.js"></script>
+  <script src="js/models/SistemaReciclagem.js"></script>
+  <script src="js/services/Storage.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/pages/login.js"></script>
+  <script src="js/pages/historico.js"></script>
+</body>
+</html>
